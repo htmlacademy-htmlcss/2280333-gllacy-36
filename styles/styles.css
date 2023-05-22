@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/inter-900.woff2") format("woff2");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #565C66;
+  height: 100%;
+  margin: 0;
+}
+
+.page-pink {
+  background: #FEAFC3;
+}
+
+.page-blue {
+  background: #69A9FF;
+}
+
+.page-yellow {
+  background: #FCC850;
+}
+
+.page-wpapper {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex-grow: 1;
+}
+
+.page-header {
+  display: flex;
+}
+
+.page-navigation-list {
+  display: flex;
+}
