@@ -28,6 +28,17 @@
   box-sizing: border-box;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 html {
   height: 100%;
 }
@@ -70,8 +81,67 @@ body {
 
 .page-header {
   display: flex;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.page-navigation {
+  flex-grow: 1;
 }
 
 .page-navigation-list {
   display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 16px;
+}
+
+.page-navigation-link {
+  line-height: 20px;
+  color: #2D3440;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+
+.page-navigation-link:hover {
+  background: rgba(252, 252, 252, 0.5);
+}
+
+.page-navigation-link:focus {
+  background: rgba(252, 252, 252, 0.5);
+  outline: 2px solid #2D3440;
+}
+
+.page-navigation-link:active {
+  background: #FCFCFC;
+}
+
+.user-butons-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-buton {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D3440;
+  padding: 6px 16px;
+  border-radius: 30px;
+  background: rgba(252, 252, 252, 0.3);
+  border: none;
+  min-height: 32px;
+  margin-left: 16px;
+}
+
+.phone {
+  font-weight: 700;
+  line-height: 20px;
+  color: #2D3440;
+  text-decoration: none;
 }
