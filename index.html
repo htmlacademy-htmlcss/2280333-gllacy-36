@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
     <title>HTML Academy: Глейси - главная страница</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -46,7 +47,7 @@
             </li>
           </ul>
         </nav>
-        <a class="phone" href=#">+7 800 555-86-28</a>
+        <a class="phone" href="tel:+78005558628">+7 800 555-86-28</a>
         <ul class="user-buttons-list">
           <li class="user-buttons-item">
             <button class="user-button user-button-search" type="button">
@@ -84,7 +85,7 @@
               </form>
             </div>
           </li>
-          <li class="user-buttons-item user-buttons-item-active">
+          <li class="user-buttons-item">
             <button class="user-button user-button-basket" type="button">
               <span class="visually-hidden">Корзина.</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" fill="none"><path fill="#2D3440" fill-rule="evenodd" d="M1.167.108a.667.667 0 1 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611L4.138.644a.667.667 0 0 0-.654-.536H1.167ZM5.69 8.402l-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" clip-rule="evenodd"/></svg>
@@ -95,16 +96,31 @@
               <ul class="user-basket-list">
                 <li class="user-basket-item">
                   <img class="user-basket-image" src="images/basket-raspberry.jpg" alt="Малинка." width="46" height="46">
-                  <div class="user-basket-wrapper">
+                  <div class="user-basket-product">
                     <a class="user-basket-link" href="#">Малинка</a>
-                    <span class="user-basket-count">1 кг х 310 ₽</span>
+                    <div class="user-basket-count">1 кг х 310 ₽</div>
                   </div>
                   <div class="user-basket-price">310 ₽</div>
                   <button class="user-basket-delete">
                     <span class="visually-hidden">Удалить из корзины.</span>
                   </button>
                 </li>
+                <li class="user-basket-item">
+                  <img class="user-basket-image" src="images/basket-bubble-gum.jpg" alt="Малинка." width="46" height="46">
+                  <div class="user-basket-product">
+                    <a class="user-basket-link" href="#">Бабл-гам</a>
+                    <div class="user-basket-count">1,5 кг х 320 ₽</div>
+                  </div>
+                  <div class="user-basket-price">480 ₽</div>
+                  <button class="user-basket-delete">
+                    <span class="visually-hidden">Удалить из корзины.</span>
+                  </button>
+                </li>
               </ul>
+              <div class="user-basket-bottom">
+                <button class="button button-red" type="button">Оформить заказ</button>
+                <div class="user-basket-total">Итого: 790 ₽</div>
+              </div>
             </div>
           </li>
         </ul>
@@ -329,7 +345,7 @@
               <div class="form-label">
                 <label class="form-label-text" for="date">Дата</label>
                 <button class="form-label-info">
-                  <div class="form-label-info-text">Введите дату доставки</div>
+                  <span class="form-label-info-text">Введите дату доставки</span>
                 </button>
                 <input class="form-input form-input-date" type="text" id="date" name="date" placeholder="01.04.2020">
               </div>
@@ -340,7 +356,7 @@
               <div class="form-label form-label-address">
                 <label class="form-label-text" for="address">Адрес</label>
                 <button class="form-label-info">
-                  <div class="form-label-info-text">Введите название улицы, дома и квартиры</div>
+                  <span class="form-label-info-text">Введите название улицы, дома и квартиры</span>
                 </button>
                 <input class="form-input form-input-address" type="text" id="address" name="address" placeholder="ул. Большая Конюшенная, 19/8">
               </div>
@@ -418,10 +434,37 @@
             </svg>
           </a>
           <div class="developer-text">
-            Сделано в <a href="https://htmldeveloper-textacademy.ru/"">.html academy</a> © 2021
+            Сделано в <a href="https://htmldeveloper-textacademy.ru/">.html academy</a> © 2021
           </div>
         </div>
       </footer>
     </div>
+
+    <div class="modal-container modal-hidden">
+      <div class="modal">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-header">Мы обязательно ответим вам!</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="modal-form-label">
+              <span class="visually-hidden">Имя и фамилия.</span>
+              <input class="form-input modal-form-input" type="text" value="" placeholder="Имя и фамилия">
+            </label>
+            <label class="modal-form-label">
+              <span class="visually-hidden">Электронная почта.</span>
+              <input class="form-input modal-form-input" type="email" value="" placeholder="email@example.com">
+            </label>
+            <label class="modal-form-label">
+              <span class="visually-hidden">Текст сообщения.</span>
+              <textarea class="form-input modal-form-input" name="text" placeholder="В свободной форме"></textarea>
+            </label>
+            <button class="button button-red" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
   </body>
 </html>

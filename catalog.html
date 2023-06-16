@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
     <title>HTML Academy: Глейси - каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -46,7 +47,7 @@
             </li>
           </ul>
         </nav>
-        <a class="phone" href=#">+7 800 555-86-28</a>
+        <a class="phone" href="tel:+78005558628">+7 800 555-86-28</a>
         <ul class="user-buttons-list">
           <li class="user-buttons-item">
             <button class="user-button user-button-search" type="button">
@@ -84,12 +85,43 @@
               </form>
             </div>
           </li>
-          <li class="user-buttons-item user-buttons-item-active">
+          <li class="user-buttons-item">
             <button class="user-button user-button-basket" type="button">
               <span class="visually-hidden">Корзина.</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" fill="none"><path fill="#2D3440" fill-rule="evenodd" d="M1.167.108a.667.667 0 1 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611L4.138.644a.667.667 0 0 0-.654-.536H1.167ZM5.69 8.402l-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" clip-rule="evenodd"/></svg>
               2 товара
             </button>
+            <div class="user-popup">
+              <h2 class="user-popup-header">Корзина</h2>
+              <ul class="user-basket-list">
+                <li class="user-basket-item">
+                  <img class="user-basket-image" src="images/basket-raspberry.jpg" alt="Малинка." width="46" height="46">
+                  <div class="user-basket-product">
+                    <a class="user-basket-link" href="#">Малинка</a>
+                    <div class="user-basket-count">1 кг х 310 ₽</div>
+                  </div>
+                  <div class="user-basket-price">310 ₽</div>
+                  <button class="user-basket-delete">
+                    <span class="visually-hidden">Удалить из корзины.</span>
+                  </button>
+                </li>
+                <li class="user-basket-item">
+                  <img class="user-basket-image" src="images/basket-bubble-gum.jpg" alt="Малинка." width="46" height="46">
+                  <div class="user-basket-product">
+                    <a class="user-basket-link" href="#">Бабл-гам</a>
+                    <div class="user-basket-count">1,5 кг х 320 ₽</div>
+                  </div>
+                  <div class="user-basket-price">480 ₽</div>
+                  <button class="user-basket-delete">
+                    <span class="visually-hidden">Удалить из корзины.</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="user-basket-bottom">
+                <button class="button button-red" type="button">Оформить заказ</button>
+                <div class="user-basket-total">Итого: 790 ₽</div>
+              </div>
+            </div>
           </li>
         </ul>
       </header>
@@ -119,9 +151,34 @@
                 <option value="price">По цене</option>
               </select>
             </fieldset>
-            <!-- <fieldset class="filter-form-group">
-              <legend class="filter-form-legend">Цена</legend>
-            </fieldset> -->
+            <fieldset class="filter-form-group">
+              <legend class="filter-form-legend">
+                Цена:
+                <label class="rage-label">
+                  <span class="visually-hidden">Минимальная цена.</span>
+                  <input class="range-input" type="text" name="price-min" value="100">
+                  ₽
+                </label>
+                -
+                <label class="rage-label">
+                  <span class="visually-hidden">Максимальная цена.</span>
+                  <input class="range-input" type="text" name="price-max" value="500">
+                  ₽
+                </label>
+              </legend>
+              <div class="range">
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 32px; width: 56px">
+                    <button class="range-toggle range-toggle-min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range-toggle range-toggle-max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
             <fieldset class="filter-form-group">
               <legend class="filter-form-legend">Жирность:</legend>
               <ul class="filter-form-list">
@@ -134,7 +191,7 @@
                 </li>
                 <li class="filter-form-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio"  value="10"name="fat" checked>
+                    <input class="control-input visually-hidden" type="radio"  value="10" name="fat" checked>
                     <span class="control-radio"></span>
                     <span class="control-label">до 10%</span>
                   </label>
@@ -160,7 +217,7 @@
               <ul class="filter-form-list">
                 <li class="filter-form-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="checkbox" value="chocolate" name="filler">
+                    <input class="control-input visually-hidden" type="checkbox" value="chocolate" name="filler[]" checked>
                     <span class="control-checkbox">
                       <svg class="control-checkbox-off" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_27600_1002)">
@@ -178,7 +235,7 @@
                 </li>
                 <li class="filter-form-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="checkbox" value="sugar-sprinkles" name="filler">
+                    <input class="control-input visually-hidden" type="checkbox" value="sugar-sprinkles" name="filler[]" checked>
                     <span class="control-checkbox">
                       <svg class="control-checkbox-off" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_27600_1002)">
@@ -196,7 +253,7 @@
                 </li>
                 <li class="filter-form-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="checkbox" value="fruits" name="filler">
+                    <input class="control-input visually-hidden" type="checkbox" value="fruits" name="filler[]">
                     <span class="control-checkbox">
                       <svg class="control-checkbox-off" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_27600_1002)">
@@ -214,7 +271,7 @@
                 </li>
                 <li class="filter-form-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="checkbox" value="syrups" name="filler">
+                    <input class="control-input visually-hidden" type="checkbox" value="syrups" name="filler[]">
                     <span class="control-checkbox">
                       <svg class="control-checkbox-off" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_27600_1002)">
@@ -232,7 +289,7 @@
                 </li>
                 <li class="filter-form-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="checkbox" value="jams" name="filler">
+                    <input class="control-input visually-hidden" type="checkbox" value="jams" name="filler[]">
                     <span class="control-checkbox">
                       <svg class="control-checkbox-off" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_27600_1002)">
@@ -253,7 +310,7 @@
             <button class="button button-pink" type="submit">Применить</button>
           </form>
         </section>
-        <section class="products">
+        <section class="products products-catalog">
           <h2 class="visually-hidden">Каталог товаров.</h2>
           <ul class="product-list product-list-catalog">
             <li class="product-item">
@@ -305,7 +362,7 @@
               </div>
             </li>
             <li class="product-item">
-              <img class="products-image" src="images/products/Фото-5.png" alt="Ежевика.">
+              <img class="products-image" src="images/products/product-5.jpg" alt="Ежевика." width="168" height="168">
               <h3 class="products-header">Ежевика</h3>
               <p class="product-text">Сливочное мороженое с ежевичным джемом</p>
               <div class="product-price-wrapper">
@@ -317,7 +374,7 @@
               </div>
             </li>
             <li class="product-item">
-              <img class="products-image" src="images/products/Фото-6.png" alt="Банан.">
+              <img class="products-image" src="images/products/product-6.jpg" alt="Банан." width="168" height="168">
               <h3 class="products-header">Банан</h3>
               <p class="product-text">Сливочный пломбир с банановым вкусом</p>
               <div class="product-price-wrapper">
@@ -329,7 +386,7 @@
               </div>
             </li>
             <li class="product-item">
-              <img class="products-image" src="images/products/Фото-7.png" alt="Шоколадка.">
+              <img class="products-image" src="images/products/product-7.jpg" alt="Шоколадка." width="168" height="168">
               <h3 class="products-header">Шоколадка</h3>
               <p class="product-text">Классический шоколадный пломбир</p>
               <div class="product-price-wrapper">
@@ -341,7 +398,7 @@
               </div>
             </li>
             <li class="product-item">
-              <img class="products-image" src="images/products/Фото-8.png" alt="Клубничка.">
+              <img class="products-image" src="images/products/product-8.jpg" alt="Клубничка." width="168" height="168">
               <h3 class="products-header">Клубничка</h3>
               <p class="product-text">Сливочный пломбир с клубничным вкусом</p>
               <div class="product-price-wrapper">
@@ -354,7 +411,7 @@
 
             </li>
             <li class="product-item">
-              <img class="products-image" src="images/products/Фото-9.png" alt="Лимон.">
+              <img class="products-image" src="images/products/product-9.jpg" alt="Лимон." width="168" height="168">
               <h3 class="products-header">Лимон</h3>
               <p class="product-text">Освежающий лимонный сорбет</p>
               <div class="product-price-wrapper">
@@ -366,7 +423,7 @@
               </div>
             </li>
             <li class="product-item">
-              <img class="products-image" src="images/products/Фото-10.png" alt="Ментол.">
+              <img class="products-image" src="images/products/product-10.jpg" alt="Ментол." width="168" height="168">
               <h3 class="products-header">Ментол</h3>
               <p class="product-text">Сливочный пломбир с ментоловым сиропом</p>
               <div class="product-price-wrapper">
@@ -378,7 +435,7 @@
               </div>
             </li>
             <li class="product-item">
-              <img class="products-image" src="images/products/Фото-11.png" alt="Орешек.">
+              <img class="products-image" src="images/products/product-11.jpg" alt="Орешек." width="168" height="168">
               <h3 class="products-header">Орешек</h3>
               <p class="product-text">Фисташковый пломбир с шоколадным сиропом</p>
               <div class="product-price-wrapper">
@@ -390,7 +447,7 @@
               </div>
             </li>
             <li class="product-item">
-              <img class="products-image" src="images/products/Фото-12.png" alt="Крем-брюле.">
+              <img class="products-image" src="images/products/product-12.jpg" alt="Крем-брюле." width="168" height="168">
               <h3 class="products-header">Крем-брюле</h3>
               <p class="product-text">Классическое крем-брюле </p>
               <div class="product-price-wrapper">
@@ -492,7 +549,7 @@
             </svg>
           </a>
           <div class="developer-text">
-            Сделано в <a href="https://htmldeveloper-textacademy.ru/"">.html academy</a> © 2021
+            Сделано в <a href="https://htmldeveloper-textacademy.ru/">.html academy</a> © 2021
           </div>
         </div>
       </footer>
