@@ -67,10 +67,10 @@
             <div class="user-popup">
               <form class="user-login-form" action="https://echo.htmlacademy.ru" method="get">
                 <h2 class="user-popup-header">Личный кабинет</h2>
-                <label class="visually-hidden" for="login-email" required>Введите email.</label>
-                <input class="input" id="login-email" placeholder="email@example.com" type="email">
-                <label class="visually-hidden" for="login-password" required>Введите пароль.</label>
-                <input class="input" id="login-password" type="password">
+                <label class="visually-hidden" for="login-email">Введите email.</label>
+                <input class="input" id="login-email" placeholder="email@example.com" type="email" required>
+                <label class="visually-hidden" for="login-password">Введите пароль.</label>
+                <input class="input" id="login-password" type="password" required>
                 <div class="user-login-form-bottom">
                   <button class="button button-red" type="submit">Войти</button>
                   <ul class="user-login-link-list">
@@ -450,15 +450,15 @@
           <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
             <label class="modal-form-label">
               <span class="visually-hidden">Имя и фамилия.</span>
-              <input class="form-input modal-form-input" type="text" value="" placeholder="Имя и фамилия">
+              <input class="form-input modal-form-input" type="text" value="" placeholder="Имя и фамилия" required>
             </label>
             <label class="modal-form-label">
               <span class="visually-hidden">Электронная почта.</span>
-              <input class="form-input modal-form-input" type="email" value="" placeholder="email@example.com">
+              <input class="form-input modal-form-input" type="email" value="" placeholder="email@example.com" required>
             </label>
             <label class="modal-form-label">
               <span class="visually-hidden">Текст сообщения.</span>
-              <textarea class="form-input modal-form-input" name="text" placeholder="В свободной форме"></textarea>
+              <textarea class="form-input modal-form-input" name="text" placeholder="В свободной форме" required></textarea>
             </label>
             <button class="button button-red" type="submit">Отправить</button>
           </form>

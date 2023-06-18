@@ -459,6 +459,10 @@ body {
   width: 324px;
 }
 
+.user-button-basket {
+  white-space: nowrap;
+}
+
 .user-button-login svg,
 .user-button-basket svg{
   margin-right: 6px;
@@ -563,6 +567,7 @@ body {
   color: #2d3440;
   text-decoration: none;
   margin-top: 19px;
+  white-space: nowrap;
 }
 
 .slider-promo {
@@ -827,7 +832,7 @@ body {
 }
 
 .banner-text {
-  margin-bottom: 28px;
+  margin-bottom: 38px;
   margin-top: 0;
 }
 
@@ -988,7 +993,7 @@ body {
 .columns {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 83px;
 }
 
 .blog {
@@ -1055,6 +1060,7 @@ body {
   background-position: left center;
   background-size: 1200px;
   margin-bottom: 80px;
+  border-radius: 16px;
 }
 
 .delivery-wrapper {
@@ -1219,7 +1225,7 @@ body {
   background: #fcfcfc;
   box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
-  padding: 40px 40px 42px 40px;
+  padding: 40px 40px 52px 40px;
 }
 
 .company-contacts-text {
@@ -1249,7 +1255,7 @@ body {
 .opening-hours {
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 32px;
+  margin-bottom: 42px;
 }
 
 .page-footer {
@@ -1297,7 +1303,6 @@ body {
 
 .footer-navigation {
   margin-left: 22px;
-  margin-top:-3px;
 }
 
 .footer-navigation-list {
