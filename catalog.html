@@ -2,12 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <title>HTML Academy: Глейси - каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="page-pink">
     <div class="page-wpapper">
+
       <header class="page-header">
         <a class="logo" href="#">
           <img src="images/logo.svg" alt="Логотип Глейси." width="137" height="56">
@@ -50,29 +51,29 @@
         <a class="phone" href="tel:+78005558628">+7 800 555-86-28</a>
         <ul class="user-buttons-list">
           <li class="user-buttons-item">
-            <button class="user-button user-button-search" type="button">
+            <a class="user-button user-button-search" href="#">
               <span class="visually-hidden">Поиск.</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill="#2D3440" fill-rule="evenodd" d="M1.663 6.188a4.667 4.667 0 1 1 8.028 3.237.674.674 0 0 0-.124.124 4.667 4.667 0 0 1-7.904-3.361Zm8.412 4.688a6 6 0 1 1 .943-.943l2.45 2.45a.667.667 0 1 1-.943.943l-2.45-2.45Z" clip-rule="evenodd"/></svg>
-            </button>
+            </a>
             <form class="user-popup user-popup-search" action="https://echo.htmlacademy.ru" method="get">
               <label class="visually-hidden" for="search">Поиск по сайту.</label>
-              <input class="input input-search" id="search" type="text" placeholder="Поиск по сайту">
+              <input class="input input-search" id="search" type="text" placeholder="Поиск по сайту" required>
             </form>
           </li>
           <li class="user-buttons-item">
-            <button class="user-button user-button-login" type="button">
+            <a class="user-button user-button-login" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><path fill="#2D3440" fill-rule="evenodd" d="M8 1.525c0-.369.298-.667.667-.667h2.666a2 2 0 0 1 2 2v9.333a2 2 0 0 1-2 2H8.667a.667.667 0 0 1 0-1.333h2.666A.667.667 0 0 0 12 12.19V2.858a.666.666 0 0 0-.667-.667H8.667A.667.667 0 0 1 8 1.525ZM4.862 3.72c.26-.26.682-.26.943 0l3.329 3.329a.673.673 0 0 1 .2.476.664.664 0 0 1-.2.476l-3.33 3.328a.667.667 0 1 1-.942-.943l2.195-2.195H.667a.667.667 0 1 1 0-1.333h6.39L4.862 4.663a.667.667 0 0 1 0-.943Z" clip-rule="evenodd"/></svg>
               Вход
-            </button>
+            </a>
             <div class="user-popup">
               <form class="user-login-form" action="https://echo.htmlacademy.ru" method="get">
                 <h2 class="user-popup-header">Личный кабинет</h2>
-                <label class="visually-hidden" for="login-email">Введите email.</label>
+                <label class="visually-hidden" for="login-email" required>Введите email.</label>
                 <input class="input" id="login-email" placeholder="email@example.com" type="email">
-                <label class="visually-hidden" for="login-password">Введите пароль.</label>
+                <label class="visually-hidden" for="login-password" required>Введите пароль.</label>
                 <input class="input" id="login-password" type="password">
                 <div class="user-login-form-bottom">
-                  <button class="button button-red" type="button">Войти</button>
+                  <button class="button button-red" type="submit">Войти</button>
                   <ul class="user-login-link-list">
                     <li class="user-buttons-item">
                       <a class="user-login-link" href="#">Забыли пароль?</a>
@@ -86,11 +87,11 @@
             </div>
           </li>
           <li class="user-buttons-item">
-            <button class="user-button user-button-basket" type="button">
+            <a class="user-button user-button-basket" href="#">
               <span class="visually-hidden">Корзина.</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" fill="none"><path fill="#2D3440" fill-rule="evenodd" d="M1.167.108a.667.667 0 1 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611L4.138.644a.667.667 0 0 0-.654-.536H1.167ZM5.69 8.402l-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" clip-rule="evenodd"/></svg>
               2 товара
-            </button>
+            </a>
             <div class="user-popup">
               <h2 class="user-popup-header">Корзина</h2>
               <ul class="user-basket-list">
@@ -101,7 +102,7 @@
                     <div class="user-basket-count">1 кг х 310 ₽</div>
                   </div>
                   <div class="user-basket-price">310 ₽</div>
-                  <button class="user-basket-delete">
+                  <button class="user-basket-delete" type="button">
                     <span class="visually-hidden">Удалить из корзины.</span>
                   </button>
                 </li>
@@ -112,7 +113,7 @@
                     <div class="user-basket-count">1,5 кг х 320 ₽</div>
                   </div>
                   <div class="user-basket-price">480 ₽</div>
-                  <button class="user-basket-delete">
+                  <button class="user-basket-delete" type="button">
                     <span class="visually-hidden">Удалить из корзины.</span>
                   </button>
                 </li>
@@ -156,13 +157,13 @@
                 Цена:
                 <label class="rage-label">
                   <span class="visually-hidden">Минимальная цена.</span>
-                  <input class="range-input" type="text" name="price-min" value="100">
+                  <input class="range-input" type="text" name="price-min" value="100" required>
                   ₽
                 </label>
                 -
                 <label class="rage-label">
                   <span class="visually-hidden">Максимальная цена.</span>
-                  <input class="range-input" type="text" name="price-max" value="500">
+                  <input class="range-input" type="text" name="price-max" value="500" required>
                   ₽
                 </label>
               </legend>
